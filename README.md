@@ -3,11 +3,16 @@
 
 The Python-- compiler translates code written in Python--, a theoretical programming language combining Python and C++ syntax, into MAPL, an intermediate representation language for academic purposes. The goal of this project was to learn and develop a basic yet complete compiler, mimicking a real one's behaviour.
 
+## Design
+The compiler uses ANTLR to define the grammar and parser.
+In the documentation folder is available the UML diagram of the compiler's structure.
+
 ## Language Specification
-Check the documentation folder to see both the languaje specification and MAPL code generation, as well as the UML diagram of the compiler.
+Check the documentation folder to see both the specification for the language itself and MAPL code generation.
+In the same folder, you can find the abstract grammar of the language, as well as two attribute grammars, one for the offset calculus and another for type checking.
 
 ## Code examples
-Several code examples to test the behaviour of the compiler are on the examples folder.
+There are several code examples, which I used to test the behaviour of the compiler, on the Examples folder.
 Here is one:
 ```
    v:[10]double;
