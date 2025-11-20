@@ -1,0 +1,66 @@
+def f() -> int: {
+	return 2;
+}
+
+def p() -> None: {}
+
+def main() -> None: {
+	a:int;
+	b:double;
+	c:char;
+	iArr:[10]int;
+	pair:struct {
+		a:int;
+		b:double;
+		c:char;
+	};
+
+	a = a;
+	a = b; # Error in line 19
+	a = c;
+	a = 'a';
+	a = 1;
+	a = 1.5; # Error in line 23
+	a = d; # Error in line 24
+	a = iArr; # Error in line 25
+	a = pair.a;
+	a = pair.b; # Error in line 27
+	a = pair.c;
+	a = pair.d; # Error in line 29
+	a = f();
+	a = p(); # Error in line 31
+	a = iArr[0];
+
+	b = a;
+	b = b;
+	b = c;
+	b = 'a';
+	b = 1;
+	b = 1.5;
+	b = d; # Error in line 40
+	b = iArr; # Error in line 41
+	b = pair.a;
+	b = pair.b;
+	b = pair.c;
+	b = pair.d; # Error in line 45
+	b = f();
+	b = p(); # Error in line 47
+	b = iArr[0];
+
+	c = a; # Error in line 50
+	c = b; # Error in line 51
+	c = c;
+	c = 'a';
+	c = 1; # Error in line 54
+	c = 1.5; # Error in line 55
+	c = d; # Error in line 56
+	c = iArr; # Error in line 57
+	c = pair.a; # Error in line 58
+	c = pair.b; # Error in line 59
+	c = pair.c;
+	c = pair.d; # Error in line 61
+	c = f(); # Error in line 62
+	c = p(); # Error in line 63
+	c = iArr[0]; # Error in line 64
+
+}

@@ -1,0 +1,25 @@
+(3)  statement*.foreach(s->s.returntype = type);
+
+(4)  expression2.type.mustPromoteTo(expression1.type);
+(5)  expression.type.mustBeLogical();
+     statement1*.foreach(s->s.returntype = returntype);
+     statement2*.foreach(s->s.returntype = returntype);
+(7)  expression*.type.mustBeBuiltIn();
+(8)  expression.type.mustPromoteTo(s.returntype);
+(9)  expression.type.mustBeLogical();
+     statement*.foreach(s->s.returntype = returntype);
+(10) expression*.type.mustBeBuiltIn();
+
+(11) expression1.type=expression2.type.arithmetic(expression3.type);
+(12) expression1.type=expression2.type.squareBrackets(expression3.type);
+(13) expression1.type=expression2.type.comparison(expression3.type);
+(14) expression1.type=expression2.type.canBeCastTo(type);
+(15) expression1.type=DoubleType.getInstance();
+(16) expression1.type=CharacterType.getInstance();
+(17) expression1.type=IntegerType.getInstance();
+(18) expression1.type=expression2.definition.type.returnType;
+(19) expression1.type=expression2.type.logic(expression3.type);
+(20) expression1.type=expression2.type.dot(ID);
+(21) expression1.type=expression2.type.arithmetic();
+(22) expression1.type=expression2.type.logic();
+(23) expression1.type=expression1.definition.type;

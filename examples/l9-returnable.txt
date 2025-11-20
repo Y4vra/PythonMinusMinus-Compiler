@@ -1,0 +1,53 @@
+record:struct {
+    integer:int;
+    size:double;
+    character:char;
+};
+
+arr:[10]int;
+
+def f() -> int:{
+    return 1;
+}
+
+def a() -> double:{
+    return 2.2;
+}
+
+def c() -> char: {
+    return 'a';
+}
+
+def d() -> None: {
+    return 2; # Error line 22
+}
+
+def e() -> int: {
+    z:int;
+    input z;
+
+    if(z > 3): {
+        return 'a';
+    } else: {
+        return 2.3; # Error line 32
+    }
+    return f();
+    return a(); # Error line 35
+    return arr; # Error line 36
+    return record; # Error line 37
+    return record.integer;
+    return record.size; # Error line 39
+    return record.character;
+}
+
+def e() -> int:{ # Error line 43
+    return 2;
+}
+
+def g() -> double: {
+    # Should give an error (missing return statement)
+}
+
+def main() -> None: {
+
+}

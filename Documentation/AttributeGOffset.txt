@@ -1,0 +1,29 @@
+(1) int offset=0;
+    (vardefinition|funcdefinition)*.forEach(d->{
+        d.setOffset(offset);
+        offset+=d.getType().numberOfBytes();
+    });
+(2) if(vardefinition.getScope>0){
+        vardefinition.offset=localBytesSum-type.numberOfBytes();
+        return vardefinition.offset;
+    }else{
+        vardefinition.offset=globalBytesSum;
+        return vardefinition.offset+type.numberOfBytes();
+    }
+
+(3) int statementOffset=0;
+    for(Statement t :statement*{
+        t.statementOffset=statementOffset;
+    }
+
+(27)int paramOffset=4;
+    for(int i=vardefinition*.size()-1;i>=0;i--) {
+        vardefinition.statementOffset=paramOffset;
+        paramOffset= vardefinition*.get(i).getType().numberOfBytes();
+    }
+
+(29)int total=0;
+    for(Field f : field*){
+        f.offset=total;
+        total+=f.type.numberOfBytes();
+    }

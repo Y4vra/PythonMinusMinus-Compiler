@@ -1,0 +1,79 @@
+PROGRAM
+========
+A program is a sequence of definitions.
+The definitions can be for variables or functions.
+
+VARIABLE DEFINITION
+======================
+The syntax for defining a variable is a list,
+with at least one element, of identifiers separated by commas
+followed by ':' and a type.
+Variable definitions end with the character ;
+
+FUNCTION DEFINITION
+======================
+Functions are defined using the reserved word "def", followed
+by the function identifier, a list of parameters separated
+by commas between '(' and ')', followed by '->' and the return type
+or "None" (if it does not return anything), and finally ":".
+
+The return type and the parameters must be of a simple type
+(no arrays or records are allowed).
+The function body is enclosed between '{' and '}'.
+The body of the function consists of a sequence of zero
+or more variable definitions followed by a sequence of zero
+or more statements.
+In both cases, they end with the character ;.
+The "main" function does not return anything, does not receive parameters,
+and must necessarily be declared last.
+
+TYPES
+=====
+The simple types are "int", "double", and "char".
+Arrays can be created with the type constructor [],
+specifying the size with an integer constant (as in C),
+followed by any type.
+The type constructor struct is used to create records.
+Records do not have an identifier, and the fields are declared
+as variables within {}. Type definitions (e.g., typedef) are not allowed.
+
+STATEMENTS
+==========
+A write operation is the reserved word "print" followed by a list of one or more expressions separated by commas.
+A read operation is the reserved word "input" followed by a list of one or more expressions separated by commas.
+An assignment consists of two expressions separated by the = operator.
+The if-else conditional statement and the while loop follow the Python language syntax (without parentheses and with : after the condition and else).
+In both cases, the body follows Java-like syntax: the statements are enclosed in {} and, if there is only one statement, the braces can be omitted.
+The statement return <expression> is allowed (the expression is mandatory).
+A function call with no return value (referred to as a procedure) is always treated as a statement.
+
+EXPRESSIONS
+===========
+A function call is considered an expression when it returns a value.
+Explicit type conversion (cast) is done using C-style syntax.
+
+Expressions are formed by:
+Integer, real, and unsigned character constants.
+Identifiers.
+
+The following operators applied to one or two expressions (in descending order of precedence):
+
+( ) — Non-associative
+
+[] — Non-associative
+
+. — Left-associative
+
+CAST — Non-associative
+
+- (unary) — Non-associative
+
+! — Non-associative
+
+* / % — Left-associative
+
++ - — Left-associative
+
+> >= < <= != == — Left-associative
+
+&& || — Left-associative

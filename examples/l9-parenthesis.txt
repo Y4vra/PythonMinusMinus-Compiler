@@ -1,0 +1,25 @@
+def f(a:int) -> int: {
+    return 3;
+}
+
+def p() -> None: {
+    a:int;
+    a = 4 + 78;
+}
+
+def main() -> None: {
+
+    b:int;
+    b = f(3) + 6;
+    f(7);
+    f('a');
+    f(2.3); # Error in line 16
+    f(3, 23, 56); # Error in line 17
+    p();
+    p(2); # Error in line 19
+    p(2.3); # Error in line 20
+    p('a'); # Error in line 21
+    f(d); # Error in line 22
+    f(3, d); # Error in line 23
+    p(d); # Error in line 24
+}

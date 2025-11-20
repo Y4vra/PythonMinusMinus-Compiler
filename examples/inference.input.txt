@@ -1,0 +1,25 @@
+def f(a: int, b: double) -> double: {
+    return a + 1;
+}
+
+def main()-> None: {
+    real: double;
+    integer: int;
+    k:double;
+    integer = 'a';              # 97
+    real = integer;
+
+    print real + 1, ' ',            # 98.0
+          'a' - integer, ' ',        # 0
+          real / 'a', ' ',            # 1.0
+          'a' * 'b', ' ';             # 9506
+
+    print 'a' == 'a', ' ',           # 1
+          'a' >= integer, ' ',       # 1
+          integer < real, ' ',       # 0
+          'a' != real + 1;      # 1
+
+
+
+    print f(integer, 'c');      # 98.0
+}

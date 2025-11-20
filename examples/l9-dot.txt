@@ -1,0 +1,32 @@
+def main() -> None: {
+	a:int;
+	b:double;
+	c:char;
+	iArr:[10]int;
+	pair:struct {
+		a:int;
+		b:double;
+		c:char;
+	};
+
+	a = a.b; # Error in line 12
+
+	a = b.a; # Error in line 14
+
+	a = c.c; # Error in line 16
+
+	a = 'a'.d; # Error in line 18
+
+	a = 1.b; # Error in line 20
+
+	a = 1.5.b; # Error in line 22
+
+	a = d.c; # Error in line 24
+
+	a = iArr.d; # Error in line 26
+
+	a = pair.a;
+	a = pair.b; # Error in line 29
+	a = pair.c;
+	a = pair.d; # Error in line 31
+}

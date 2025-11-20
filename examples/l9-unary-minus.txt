@@ -1,0 +1,13 @@
+def main() -> None: {
+	a:int;
+	b:double;
+	c:char;
+
+	a = -a;
+	a = -b; # Error in line 7
+	a = -c;
+	a = -'a';
+	a = -1;
+	a = -1.5; # Error in line 11
+	a = -d; # Error in line 12
+}

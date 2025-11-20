@@ -1,0 +1,25 @@
+def main() -> None: {
+    record:struct {
+		a:int;
+		b:double;
+		c:char;
+    };
+
+    arr:[5][10]int;
+
+    input record.a;
+    print record.b;
+    input record; # Error
+
+    input arr[2]; # Error
+    print arr[2]; # Error
+    input arr[2][1];
+    print arr[2][1];
+
+    print arr; # Error
+
+    print 3 + 4 ;
+
+    input 3; # Error
+    input 3*5-12; # Error
+}

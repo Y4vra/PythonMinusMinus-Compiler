@@ -1,0 +1,13 @@
+
+def main() -> None: {
+    a: double;
+    if 'a'==6 : {
+        if 6.04 +2 : {
+
+        } else : {
+            a = 4e-5;
+            a = 2e+3;
+
+        }
+    }
+}

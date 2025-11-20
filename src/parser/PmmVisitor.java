@@ -1,0 +1,98 @@
+// Generated from C:/Users/javie/Desktop/proyectos/Uniovi3/DLP/Intellij_project/DLP_PythonMinusMinus/src/parser/Pmm.g4 by ANTLR 4.13.2
+package parser;
+
+import ast.*;
+import ast.definitions.*;
+import ast.expressions.*;
+import ast.statements.*;
+import ast.types.*;
+
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
+
+/**
+ * This interface defines a complete generic visitor for a parse tree produced
+ * by {@link PmmParser}.
+ *
+ * @param <T> The return type of the visit operation. Use {@link Void} for
+ * operations with no return type.
+ */
+public interface PmmVisitor<T> extends ParseTreeVisitor<T> {
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#program}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitProgram(PmmParser.ProgramContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#mainDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMainDefinition(PmmParser.MainDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#definition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDefinition(PmmParser.DefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#funcDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFuncDefinition(PmmParser.FuncDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#parameters}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameters(PmmParser.ParametersContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#varDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarDefinition(PmmParser.VarDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType(PmmParser.TypeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#field}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitField(PmmParser.FieldContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#builtInType}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBuiltInType(PmmParser.BuiltInTypeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatement(PmmParser.StatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(PmmParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#invocation}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInvocation(PmmParser.InvocationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link PmmParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpression(PmmParser.ExpressionContext ctx);
+}

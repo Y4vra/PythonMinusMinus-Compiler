@@ -1,0 +1,22 @@
+def main() -> None: {
+	a:int;
+	b:double;
+	c:char;
+	iArr:[10]int;
+	pair:struct {
+		a:int;
+		b:int;
+	};
+
+	b = (double) a;
+	a = (char) b;
+	a = (int) c;
+	b = (double) 'a';
+	a = (int) 1;
+	a = (char) 1.5;
+	a = (char) d; # Error in line 17
+	a = (double) iArr; # Error in line 18
+	a = (int) pair; # Error in line 19
+	a = ([10]int) iArr; # Error in line 20
+	iArr = ([10]int) 1; # Error in line 21
+}
